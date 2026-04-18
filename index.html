@@ -25,8 +25,6 @@
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
   }
-
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -43,8 +41,6 @@
     text-decoration: none; transition: all 0.2s;
   }
   .nav-cta:hover { background: #1aad52; transform: translateY(-1px); }
-
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column;
@@ -107,8 +103,6 @@
     text-decoration: none; transition: all 0.2s;
   }
   .btn-secondary:hover { border-color: var(--green); color: var(--green); }
-
-  /* STATS */
   .stats {
     display: flex; justify-content: center; gap: 60px;
     flex-wrap: wrap;
@@ -120,8 +114,6 @@
   .stat { text-align: center; }
   .stat-num { font-family: 'Syne', sans-serif; font-size: 42px; font-weight: 800; color: var(--green); }
   .stat-label { font-size: 14px; color: var(--muted); margin-top: 4px; }
-
-  /* PROBLEM */
   .section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
   .section-tag {
     display: inline-block;
@@ -138,7 +130,6 @@
     line-height: 1.1; margin-bottom: 20px;
   }
   .section h2 em { color: var(--green); font-style: normal; }
-
   .pain-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px; margin-top: 48px;
@@ -152,12 +143,7 @@
   .pain-icon { font-size: 32px; margin-bottom: 16px; }
   .pain-card h3 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 10px; }
   .pain-card p { color: var(--muted); font-size: 15px; line-height: 1.6; }
-
-  /* HOW IT WORKS */
-  .how-section {
-    padding: 100px 5%;
-    background: var(--bg2);
-  }
+  .how-section { padding: 100px 5%; background: var(--bg2); }
   .how-inner { max-width: 1200px; margin: 0 auto; }
   .steps {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -177,8 +163,6 @@
   }
   .step h3 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 12px; }
   .step p { color: var(--muted); font-size: 14px; line-height: 1.6; }
-
-  /* FEATURES */
   .features-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px; margin-top: 60px;
@@ -205,8 +189,6 @@
   }
   .feature-card h3 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 12px; }
   .feature-card p { color: var(--muted); font-size: 15px; line-height: 1.6; }
-
-  /* LEAD SCORES */
   .scores { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 48px; }
   .score-badge {
     padding: 12px 24px; border-radius: 50px;
@@ -215,17 +197,40 @@
   .hot { background: rgba(239,68,68,0.15); border: 2px solid #ef4444; color: #ef4444; }
   .warm { background: rgba(245,158,11,0.15); border: 2px solid #f59e0b; color: #f59e0b; }
   .cold { background: rgba(59,130,246,0.15); border: 2px solid #3b82f6; color: #3b82f6; }
-
-  /* PRICING */
   .pricing-section { padding: 100px 5%; background: var(--bg2); }
   .pricing-inner { max-width: 1200px; margin: 0 auto; }
+
+  /* ✅ Billing Toggle */
+  .billing-toggle {
+    display: flex; justify-content: center; margin-top: 32px; margin-bottom: 8px;
+  }
+  .billing-toggle .toggle-wrap {
+    display: flex; background: var(--bg3); border: 1px solid var(--border);
+    padding: 4px; border-radius: 50px;
+  }
+  .billing-toggle button {
+    padding: 10px 28px; border-radius: 50px;
+    font-weight: 600; font-size: 14px;
+    border: none; cursor: pointer; transition: all 0.2s;
+    background: transparent; color: var(--muted);
+  }
+  .billing-toggle button.active {
+    background: var(--green); color: #060d06;
+  }
+  .save-badge {
+    background: #f59e0b; color: #000;
+    font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 50px;
+    margin-left: 6px;
+  }
+
   .pricing-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px; margin-top: 60px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px; margin-top: 40px;
   }
   .pricing-card {
     background: var(--bg3); border: 1px solid var(--border);
-    border-radius: 24px; padding: 40px;
+    border-radius: 24px; padding: 36px;
     transition: all 0.3s; position: relative;
   }
   .pricing-card.popular {
@@ -239,11 +244,12 @@
     font-size: 12px; font-weight: 700;
   }
   .plan-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-  .plan-price { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
-  .plan-price span { font-size: 18px; font-weight: 400; color: var(--muted); }
-  .plan-desc { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
-  .plan-features { list-style: none; margin-bottom: 36px; }
-  .plan-features li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; display: flex; align-items: center; gap: 10px; }
+  .plan-price { font-family: 'Syne', sans-serif; font-size: 42px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+  .plan-price span { font-size: 16px; font-weight: 400; color: var(--muted); }
+  .plan-yearly-note { font-size: 13px; color: var(--green); margin-bottom: 4px; min-height: 20px; }
+  .plan-desc { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+  .plan-features { list-style: none; margin-bottom: 32px; }
+  .plan-features li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; display: flex; align-items: center; gap: 10px; }
   .plan-features li::before { content: '✓'; color: var(--green); font-weight: 700; }
   .plan-btn {
     display: block; text-align: center;
@@ -255,8 +261,6 @@
   .plan-btn-primary:hover { background: var(--green-dark); }
   .plan-btn-outline { border: 1px solid var(--border); color: var(--text); }
   .plan-btn-outline:hover { border-color: var(--green); color: var(--green); }
-
-  /* CTA */
   .cta-section {
     padding: 120px 5%; text-align: center;
     position: relative; overflow: hidden;
@@ -275,8 +279,6 @@
   }
   .cta-section h2 em { color: var(--green); font-style: normal; }
   .cta-section p { color: var(--muted); font-size: 18px; margin-bottom: 48px; position: relative; }
-
-  /* FOOTER */
   footer {
     padding: 40px 5%;
     border-top: 1px solid var(--border);
@@ -288,8 +290,6 @@
   .footer-links { display: flex; gap: 24px; }
   .footer-links a { color: var(--muted); font-size: 14px; text-decoration: none; }
   .footer-links a:hover { color: var(--green); }
-
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -298,8 +298,6 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
   }
-
-  /* WA MOCKUP */
   .wa-mockup {
     background: #1a2a1a; border: 1px solid var(--border);
     border-radius: 20px; padding: 24px;
@@ -319,7 +317,6 @@
   .msg-user { background: #1a3d2a; padding: 10px 14px; border-radius: 12px 0 12px 12px; display: inline-block; max-width: 85%; float: right; color: #d4f5d4; }
   .msg-time { font-size: 11px; color: var(--muted); margin-top: 4px; }
   .clearfix::after { content: ''; display: table; clear: both; }
-
   .two-col {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 80px; align-items: center;
@@ -327,7 +324,6 @@
   @media (max-width: 768px) {
     .two-col { grid-template-columns: 1fr; gap: 40px; }
     .stats { gap: 32px; }
-    nav .nav-links { display: none; }
   }
 </style>
 </head>
@@ -422,7 +418,6 @@
 <div class="section">
   <div class="section-tag">Features</div>
   <h2><em>Powerful Features</em><br>Simple Interface</h2>
-
   <div style="margin-top: 40px;" class="two-col">
     <div>
       <p style="color: var(--muted); font-size: 17px; line-height: 1.8; margin-bottom: 32px;">DealSignal works for you 24/7 — qualifying, scoring, and organizing every lead automatically.</p>
@@ -446,7 +441,6 @@
       <div style="margin-top: 12px; padding: 10px 14px; background: rgba(37,211,102,0.1); border: 1px solid var(--border); border-radius: 10px; font-size: 13px; color: var(--green);">🔥 HOT Lead detected — Added to Dashboard!</div>
     </div>
   </div>
-
   <div class="features-grid" style="margin-top: 60px;">
     <div class="feature-card">
       <div class="feature-icon">🤖</div>
@@ -485,12 +479,23 @@
 <section class="pricing-section" id="pricing">
   <div class="pricing-inner">
     <div class="section-tag">Pricing</div>
-    <h2 style="font-family: 'Syne', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px;">Simple <em style="color: var(--green); font-style: normal;">Pricing</em></h2>
+    <h2 style="font-family: 'Syne', sans-serif; font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 12px;">Simple <em style="color: var(--green); font-style: normal;">Pricing</em></h2>
     <p style="color: var(--muted); font-size: 17px;">No hidden charges — what you see is what you get.</p>
+
+    <!-- ✅ Billing Toggle -->
+    <div class="billing-toggle">
+      <div class="toggle-wrap">
+        <button id="btn-monthly" class="active" onclick="setBilling('monthly')">Monthly</button>
+        <button id="btn-yearly" onclick="setBilling('yearly')">Yearly <span class="save-badge">25% OFF</span></button>
+      </div>
+    </div>
+
     <div class="pricing-grid">
+      <!-- Trial -->
       <div class="pricing-card">
         <div class="plan-name">Trial</div>
-        <div class="plan-price">₹0 <span>/14 days</span></div>
+        <div class="plan-price">₹0 <span>/7 days</span></div>
+        <div class="plan-yearly-note"></div>
         <div class="plan-desc">Try it first, decide later</div>
         <ul class="plan-features">
           <li>WhatsApp Bot Active</li>
@@ -500,30 +505,62 @@
         </ul>
         <a href="https://app.narrowtech.in" class="plan-btn plan-btn-outline">Start for Free</a>
       </div>
+
+      <!-- Starter -->
+      <div class="pricing-card">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price" id="starter-price">₹2,999 <span>/month</span></div>
+        <div class="plan-yearly-note" id="starter-note"></div>
+        <div class="plan-desc">Perfect for solo brokers</div>
+        <ul class="plan-features">
+          <li>WhatsApp Bot Active</li>
+          <li>1,200 Leads/month</li>
+          <li>HOT/WARM/COLD Scoring</li>
+          <li>Full Dashboard</li>
+          <li>Lead Export Excel/PDF</li>
+          <li>Follow-up Reminders</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="https://app.narrowtech.in" class="plan-btn plan-btn-outline">Get Started →</a>
+      </div>
+
+      <!-- Pro -->
       <div class="pricing-card popular">
         <div class="popular-badge">Most Popular</div>
         <div class="plan-name">Pro</div>
-        <div class="plan-price">₹999 <span>/month</span></div>
+        <div class="plan-price" id="pro-price">₹4,999 <span>/month</span></div>
+        <div class="plan-yearly-note" id="pro-note"></div>
         <div class="plan-desc">For serious brokers</div>
         <ul class="plan-features">
-          <li>Unlimited Leads</li>
+          <li>WhatsApp Bot Active</li>
+          <li>3,000 Leads/month</li>
           <li>HOT/WARM/COLD Scoring</li>
           <li>Full Dashboard</li>
-          <li>WhatsApp Chat UI</li>
-          <li>Lead Export</li>
+          <li>Lead Export Excel/PDF</li>
+          <li>Follow-up Reminders</li>
+          <li>Analytics Dashboard</li>
+          <li>WhatsApp Notifications</li>
           <li>Priority Support</li>
         </ul>
         <a href="https://app.narrowtech.in" class="plan-btn plan-btn-primary">Get Started Now →</a>
       </div>
+
+      <!-- Business -->
       <div class="pricing-card">
         <div class="plan-name">Business</div>
-        <div class="plan-price">₹1999 <span>/month</span></div>
+        <div class="plan-price" id="business-price">₹9,999 <span>/month</span></div>
+        <div class="plan-yearly-note" id="business-note"></div>
         <div class="plan-desc">Built for growing teams</div>
         <ul class="plan-features">
-          <li>Everything in Pro</li>
+          <li>WhatsApp Bot Active</li>
+          <li>Unlimited Leads</li>
+          <li>HOT/WARM/COLD Scoring</li>
+          <li>Full Dashboard</li>
+          <li>Lead Export Excel/PDF</li>
+          <li>Follow-up Reminders</li>
+          <li>Analytics Dashboard</li>
+          <li>WhatsApp Notifications</li>
           <li>3 Team Members</li>
-          <li>Advanced Analytics</li>
-          <li>Custom Bot Flow</li>
           <li>Dedicated Support</li>
         </ul>
         <a href="https://app.narrowtech.in" class="plan-btn plan-btn-outline">Contact Us</a>
@@ -536,7 +573,7 @@
 <section class="cta-section">
   <div class="cta-glow"></div>
   <h2>Get Started Today —<br><em>Completely Free!</em></h2>
-  <p>14-day free trial — no credit card required</p>
+  <p>7-day free trial — no credit card required</p>
   <a href="https://app.narrowtech.in" class="btn-primary" style="font-size: 18px; padding: 20px 48px;">🚀 Start Free Trial</a>
 </section>
 
@@ -550,6 +587,27 @@
     <a href="mailto:kuldeepsingh55210@gmail.com">Contact</a>
   </div>
 </footer>
+
+<script>
+function setBilling(type) {
+  const isYearly = type === 'yearly';
+
+  document.getElementById('btn-monthly').className = isYearly ? '' : 'active';
+  document.getElementById('btn-yearly').className = isYearly ? 'active' : '';
+
+  // Starter
+  document.getElementById('starter-price').innerHTML = isYearly ? '₹26,990 <span>/year</span>' : '₹2,999 <span>/month</span>';
+  document.getElementById('starter-note').innerHTML = isYearly ? '₹2,249/month equivalent' : '';
+
+  // Pro
+  document.getElementById('pro-price').innerHTML = isYearly ? '₹44,990 <span>/year</span>' : '₹4,999 <span>/month</span>';
+  document.getElementById('pro-note').innerHTML = isYearly ? '₹3,749/month equivalent' : '';
+
+  // Business
+  document.getElementById('business-price').innerHTML = isYearly ? '₹89,990 <span>/year</span>' : '₹9,999 <span>/month</span>';
+  document.getElementById('business-note').innerHTML = isYearly ? '₹7,499/month equivalent' : '';
+}
+</script>
 
 </body>
 </html>
